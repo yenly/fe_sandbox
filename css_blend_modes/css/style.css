@@ -20,7 +20,7 @@ div {
 body {
 	font: 1em/1.4 'Helvetica Neue', sans-serif;
 	color: #eee;
-	background: url('falls.jpg') no-repeat, linear-gradient(#6de590, #e67478);
+	background: url('../images/falls.jpg') no-repeat, linear-gradient(#6de590, #e67478);
 	background-blend-mode: multiply;
 	background-size: cover;
 }
