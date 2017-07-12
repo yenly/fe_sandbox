@@ -1,0 +1,46 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+div {
+	max-width: 440px;
+	position: absolute;
+	right: 20px;
+	top: 25%;
+}
+
+/* BLEND MODES */
+/*
+- multiply blend mode darkens the image by multiplying the colors in the body's element background image by that light green background color we defined
+- the mix-blend-mode property blends the content of any HTML or SVG element that's painted underneath
+- both features accepts the same 16 blend mode value
+*/
+
+body {
+	font: 1em/1.4 'Helvetica Neue', sans-serif;
+	color: #eee;
+	background: url('falls.jpg') no-repeat, linear-gradient(#6de590, #e67478);
+	background-blend-mode: multiply;
+	background-size: cover;
+}
+
+h1 {
+	font-size: 12em;
+	margin: 0;
+	line-height: 1;
+	letter-spacing: -2rem;
+	color: #6b845d;
+}
+
+span:nth-child(2) {
+	color: #801b3a;
+}
+
+span:nth-child(3) {
+	color: #164d67;
+}
+
+h1 span {
+	mix-blend-mode: screen;
+}
