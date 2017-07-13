@@ -1,0 +1,53 @@
+.blend {
+  background-image: url("../images/female_hiker.png");
+  background-color: firebrick;
+  background-blend-mode: multiply;
+  left: 50px;
+  top: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-size: cover; }
+
+.blend2 {
+  background: linear-gradient(aqua, royalblue), url("../images/female_hiker.png");
+  background-blend-mode: multiply;
+  left: 50px;
+  top: 300px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-size: cover; }
+
+.feature {
+  background-image: url("../images/female_hiker.png");
+  background-color: pink;
+  background-blend-mode: multiply;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  top: 700px;
+  left: 50px; }
+
+.feature2 {
+  background: linear-gradient(steelblue, purple), url("../images/female_hiker.png");
+  background-blend-mode: multiply;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  top: 700px;
+  left: 300px; }
+
+.feature3 {
+  background: linear-gradient(firebrick 40%, blue), url("../images/female_hiker.png");
+  background-blend-mode: multiply;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  top: 700px;
+  left: 550px; }
+
+/*# sourceMappingURL=style2.css.map */

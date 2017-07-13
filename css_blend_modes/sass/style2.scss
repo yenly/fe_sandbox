@@ -1,0 +1,86 @@
+$bm-gradient: linear-gradient(aqua, royalblue);
+
+// blend mode gradients
+$fancy-grad: linear-gradient(steelblue, purple);
+$transp-grad: linear-gradient(black, transparent);
+$snarky-grad: linear-gradient(firebrick 40%, blue);
+
+// simple version of mixin for blend mode
+@mixin blendy($img, $color, $blend) {
+  background-image: url('../images/#{$img}');
+  background-color: $color;
+  background-blend-mode: $blend;
+}
+
+@mixin blendyGradient($img, $color, $blend) {
+  $img-path: url('../images/#{$img}');
+  @if $color == $bm-gradient {
+    background: $color, $img-path;
+  } @else {
+    background-image: $img-path;
+    background-color: $color;
+  }
+  background-blend-mode: $blend;
+}
+
+// example of flexible designed blend mode
+@mixin blendyDynamic($img, $color: null, $grad: null, $blend: multiply) {
+  $img-path: url('../images/#{$img}');
+  @if $grad {
+    background: $grad, $img-path;
+  } @else {
+    background-image: $img-path;
+    background-color: $color;
+  }
+  background-blend-mode: $blend;
+}
+
+.blend {
+  @include blendy("female_hiker.png", firebrick, multiply);
+  left: 50px;
+  top: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.blend2 {
+  @include blendyGradient("female_hiker.png", $bm-gradient, multiply);
+  left: 50px;
+  top: 300px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.feature {
+  @include blendyDynamic("female_hiker.png", pink);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  top: 700px;
+  left: 50px;
+}
+
+.feature2 {
+  @include blendyDynamic("female_hiker.png", $grad: $fancy-grad);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  top: 700px;
+  left: 300px;
+}
+
+.feature3 {
+  @include blendyDynamic("female_hiker.png", $grad: $snarky-grad);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  top: 700px;
+  left: 550px;
+}
