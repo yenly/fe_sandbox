@@ -38,9 +38,9 @@ $snarky-grad: linear-gradient(firebrick 40%, blue);
 .blend {
   @include blendy("female_hiker.png", firebrick, multiply);
   left: 50px;
-  top: 50px;
-  width: 300px;
-  height: 300px;
+  top: 10px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover;
 }
@@ -48,39 +48,98 @@ $snarky-grad: linear-gradient(firebrick 40%, blue);
 .blend2 {
   @include blendyGradient("female_hiker.png", $bm-gradient, multiply);
   left: 50px;
-  top: 300px;
-  width: 300px;
-  height: 300px;
+  top: 70px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover;
 }
 
 .feature {
   @include blendyDynamic("female_hiker.png", pink);
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover;
-  top: 700px;
+  top: 130px;
   left: 50px;
 }
 
 .feature2 {
   @include blendyDynamic("female_hiker.png", $grad: $fancy-grad);
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover;
-  top: 700px;
-  left: 300px;
+  top: 190px;
+  left: 50px;
 }
 
 .feature3 {
   @include blendyDynamic("female_hiker.png", $grad: $snarky-grad);
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover;
-  top: 700px;
-  left: 550px;
+  top: 250px;
+  left: 50px;
+}
+
+// example of animations and keyframes
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+ @mixin prefix-property($name, $value) {
+  -webkit-#{$name}: $value;
+     -moz-#{$name}: $value;
+       -o-#{$name}: $value;
+          #{$name}: $value;
+}
+
+// @include keyframes(example) {
+//    0% {
+//      transform: scale(0,0);
+//    }
+//    100% {
+//      transform: scale(1,1);
+//    }
+//  }
+
+@include keyframes(example) {
+    0% {
+      @include prefix-property(transform, scale(0,0));
+    }
+    100% {
+      @include prefix-property(transform, scale(1,1));
+    }
+  }
+
+  @mixin animation($name,
+                   $duration: 3s,
+                   $timing-function:ease,
+                   $delay:0s,
+                   $iteration-count: 1,
+                   $direction: normal,
+                   $fill-mode: none,
+                   $play-state: running) {
+  -webkit-animation: $name $duration $timing-function $delay $iteration-count $direction $fill-mode $play-state;
+  -moz-animation: $name $duration $timing-function $delay $iteration-count $direction $fill-mode $play-state;
+  animation: $name $duration $timing-function $delay $iteration-count $direction $fill-mode $play-state;
+}
+
+.exampleAnimation {
+  @include animation(example);
+}
+
+.exampleAnimation-Fast-Loop {
+  @include animation(example, $duration: 0.5s, $iteration-count: infinite);
 }

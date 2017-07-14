@@ -3,9 +3,9 @@
   background-color: firebrick;
   background-blend-mode: multiply;
   left: 50px;
-  top: 50px;
-  width: 300px;
-  height: 300px;
+  top: 10px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover; }
 
@@ -13,9 +13,9 @@
   background: linear-gradient(aqua, royalblue), url("../images/female_hiker.png");
   background-blend-mode: multiply;
   left: 50px;
-  top: 300px;
-  width: 300px;
-  height: 300px;
+  top: 70px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover; }
 
@@ -23,31 +23,74 @@
   background-image: url("../images/female_hiker.png");
   background-color: pink;
   background-blend-mode: multiply;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover;
-  top: 700px;
+  top: 130px;
   left: 50px; }
 
 .feature2 {
   background: linear-gradient(steelblue, purple), url("../images/female_hiker.png");
   background-blend-mode: multiply;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover;
-  top: 700px;
-  left: 300px; }
+  top: 190px;
+  left: 50px; }
 
 .feature3 {
   background: linear-gradient(firebrick 40%, blue), url("../images/female_hiker.png");
   background-blend-mode: multiply;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-size: cover;
-  top: 700px;
-  left: 550px; }
+  top: 250px;
+  left: 50px; }
+
+@-webkit-keyframes example {
+  0% {
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0); }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); } }
+@-moz-keyframes example {
+  0% {
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0); }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); } }
+@keyframes example {
+  0% {
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0); }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); } }
+.exampleAnimation {
+  -webkit-animation: example 3s ease 0s 1 normal none running;
+  -moz-animation: example 3s ease 0s 1 normal none running;
+  animation: example 3s ease 0s 1 normal none running; }
+
+.exampleAnimation-Fast-Loop {
+  -webkit-animation: example 0.5s ease 0s infinite normal none running;
+  -moz-animation: example 0.5s ease 0s infinite normal none running;
+  animation: example 0.5s ease 0s infinite normal none running; }
 
 /*# sourceMappingURL=style2.css.map */
