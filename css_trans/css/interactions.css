@@ -5,14 +5,14 @@
 .button {
 	color: #4a89ca;
 	border: 2px solid;
-	transition-property: background, border-radius, color;
-	transition-duration: .4s, .8s, .4s;
+	/*transition-property: background, border-radius, color;
+	transition-duration: .4s, .8s, .4s;*/
 }
 
 .button:hover {
-	color: #fff;
+	/*color: #fff;
 	background: #4a89ca;
-	border-radius: 1em;
+	border-radius: 1em;*/
 }
 
 .button:active {
@@ -24,10 +24,38 @@
 ==================================== */
 .photo-overlay {
 	opacity: 0;
-	transition-duration: .6s;
+	transition-duration: .5s;
 	transition-property: opacity;
 }
 
 .photo-overlay:hover {
+	opacity: 1;
+}
+
+.photo-overlay .button {
+	opacity: 0;
+	transition-property: opacity, background, box-shadow;
+	transition-duration: .5s;
+	transition-delay: .2s, .3s, 0s;
+}
+
+.photo-overlay .button:hover {
+	background: rgba(74, 137, 202, 1);
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, .7);
+}
+
+.photo-overlay .button:hover .btn-icon {
+	opacity: 1;
+	left: 80%;
+}
+
+.photo-overlay .btn-icon {
+	transition-property: opacity, left;
+	transition-duration: .5s;
+	transition-delay: .3s;
+	transition-timing-function: ease-out;
+}
+
+.photo-overlay:hover .button {
 	opacity: 1;
 }
