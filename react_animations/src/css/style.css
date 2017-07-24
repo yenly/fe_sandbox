@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  background: #e5e5e5;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  color: #303030;
+  margin-top: 0;
+}
+input {
+  width: 100%;
+  font-size: 1em;
+  border-radius: .3em;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: solid 1px #d5d5d5;
+  outline: none;
+}
+button {
+  float: right;
+  display: none;
+  cursor: pointer;
+  color: tomato;
+  background: white;
+  border: 0;
+  border-radius: .3em;
+  padding: .35em .5em;
+  outline: none;
+}
+.container {
+  width: 90%;
+  margin: 2em auto 0;
+  padding: 1.5em;
+  background: #fff;
+  border-radius: .5em;
+  box-shadow: 0 2px 0 rgba(0,0,0,.1);
+}
+.guest-list {
+  overflow: hidden;
+}
+li {
+  font-size: 1.1em;
+  color: #fff;
+  border-bottom: dotted 1px rgba(255,255,255, .4);
+  padding: 1em .85em;
+  background: #74afe1;
+}
+li:last-child {
+  border: none;
+}
+li:hover button {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 50%;
+  }
+}
+
+/* =================================
+    ReactCSSTransitionGroup Classes
+==================================== */
+
+/* start enter state */
+.slide-enter {
+  transform: translatex(-100%);
+}
+
+/* end enter state */
+.slide-enter.slide-enter-active {
+  transform: translateX(0);
+  transition: transform .5s ease-out;
+}
+
+/* start leave state */
+.slide-leave {
+  transform: translateX(0);
+}
+
+/* end leave state */
+.slide-leave.slide-leave-active {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: .5s ease-in;
+}
+
+/* initial mounting */
+.slide-appear {
+  opacity: 0;
+}
+
+.slide-appear.slide-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
