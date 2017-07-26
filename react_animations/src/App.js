@@ -6,6 +6,23 @@ import { CSSTransitionGroup } from 'react-transition-group';
 // CSS
 import './css/style.css';
 
+// Panel
+
+class Panel extends Component {
+  render() {
+    return (
+      <CSSTransitionGroup
+        transitionName="panel"
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={500}
+        transitionAppear={true}
+        transitionAppearTimeout={500}>
+        <div className="panel">Testing Panel</div>
+      </CSSTransitionGroup>
+    );
+  }
+}
+
 // Component
 class GuestList extends Component {
   constructor() {
@@ -47,13 +64,14 @@ class GuestList extends Component {
       <div className="guest-list">
         <h1>Guest List</h1>
         <input type="text" placeholder="Invite Someone" value={this.state.newName} onKeyDown={this.handleChange.bind(this)} />
+        <Panel />
         <CSSTransitionGroup
           component="ul"
           transitionName="slide"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={500}
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
           transitionAppear={true}
-          transitionAppearTimeout={500}>
+          transitionAppearTimeout={300}>
 
           {guests}
 

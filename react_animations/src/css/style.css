@@ -100,3 +100,39 @@ li:hover button {
   opacity: 1;
   transition: opacity 0.5s ease-in;
 }
+
+/* Panel */
+.panel {
+  width: 80%;
+  height: 25%;
+  background-color: #3498DB;
+  border-radius: .5em .5em 0 0;
+  /*padding: 1em;*/
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto 0;
+}
+
+/* Panel transitions */
+.panel-appear, .panel-enter {
+  transform: translateY(100%);
+}
+
+.panel-appear.panel-appear-active, .panel-enter.panel-enter-active {
+  transform: translateY(-10%);
+  transition: transform .5s cubic-bezier(0.6, 1.5, 0.6, 1);
+}
+
+/* start leave state */
+.panel-leave {
+  transform: translateY(0);
+}
+
+/* end leave state */
+.panel-leave.panel-leave-active {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: .5s ease-in;
+}
