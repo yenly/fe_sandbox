@@ -1,0 +1,372 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+/* Colors
+
+*Primary*
+White: #f6f4ec;
+Green: #9bc152;
+Navy-Gray: #282932;
+
+*Secondary*
+Medium Green: #81a53d;
+Dark Green: #708647;
+Grays: #8b8d9b and #6d6f81;
+Blues: #6b6d85 and #47495d;
+Dark Navy: #1b1b21;  */
+
+/* Webfonts */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,400i|Alegreya+Sans:400,400i|Alegreya:400i,900i');
+
+
+/* Basic Elements */
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+  color: #282932;
+	background: #f6f4ec;
+	font-family: 'Alegreya Sans', Verdana, Tahoma, sans-serif;
+	font-size: 1.25em;
+	line-height: 1.6;
+}
+
+p {
+	margin: 0;
+}
+
+p + p {
+	text-indent: 1.5em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Alegreya', Georgia, serif;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h1 {
+	font-size: 3.157em;
+	line-height: 1.1;
+}
+
+h2 {
+	font-size: 2.369em;
+	line-height: 1.15;
+	margin: 0 0 .5em;
+}
+
+h3 {
+	font-size: 1.777em;
+	line-height: 1.2;
+	margin: 0.9em 0 0.62em;
+}
+
+ul {
+	margin: 0;
+}
+
+li {
+	margin: 0;
+}
+
+a:link {
+	text-decoration: none;
+
+}
+a:visited {
+	text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+	text-decoration: none;
+}
+
+abbr {
+	font-family: 'Alegreya Sans SC', 'Alegreya Sans', Verdana, Tahoma, sans-serif;
+	text-transform: lowercase;
+}
+
+::selection {
+}
+
+
+/* Specific Styles */
+
+header {
+}
+
+header h1 {
+}
+
+header h2 {
+}
+
+header abbr {
+}
+
+.summary {
+}
+
+.summary p {
+}
+
+.summary p + p {
+}
+
+.summary a {
+}
+
+.summary a:hover {
+}
+
+.preamble, .requirements {
+}
+
+.preamble h3, .requirements h3 {
+}
+
+.preamble p, .requirements p {
+}
+
+.requirements a {
+}
+
+.requirements a:hover {
+}
+
+.requirements p:last-of-type {
+}
+
+.requirements p:last-of-type a {
+}
+
+.requirements p:last-of-type a:hover {
+}
+
+.benefits {
+}
+
+.benefits h3 {
+}
+
+.benefits p {
+}
+
+.explanation, .participation {
+}
+
+.explanation {
+}
+
+.participation {
+}
+
+.explanation h3, .participation h3 {
+}
+
+.explanation p, .participation p {
+}
+
+.participation h3 {
+}
+
+.participation a {
+}
+
+.participation a:hover {
+}
+
+.participation p:last-of-type a:nth-of-type(1), .participation p:last-of-type a:nth-of-type(2) {
+}
+
+footer {
+}
+
+footer:after {
+}
+
+footer a {
+}
+
+footer a:nth-of-type(even) {
+}
+
+footer a:hover {
+}
+
+aside {
+}
+
+.sidebar {
+}
+
+.design-selection {
+}
+
+.design-archives, .zen-resources {
+}
+
+.sidebar h3 {
+}
+
+.sidebar ul {
+}
+
+.sidebar li {
+}
+
+.sidebar a {
+}
+
+.sidebar a:hover {
+}
+
+.design-selection a:nth-of-type(even) {
+}
+
+.sidebar a:hover:nth-of-type(even) {
+}
+
+.zen-resources h3 {
+}
+
+.design-archives a, .zen-resources a {
+}
+
+/* Media Queries */
+
+@media (max-width: 64em) {
+  body {
+  }
+
+  .summary p {
+  }
+
+  .explanation h3, .participation h3, .preamble h3, .requirements h3, .benefits h3 {
+  }
+
+  .explanation p, .participation p, .preamble p, .requirements p, .benefits p {
+  }
+}
+
+@media (max-width: 54em) {
+  body {
+  }
+
+  .summary p {
+  }
+}
+
+@media (max-width: 47em) {
+  header h1 {
+  }
+
+  header h2 {
+  }
+
+  .explanation, .participation {
+  }
+}
+
+@media (max-width: 34em) {
+  header {
+  }
+  header h1 {
+  }
+
+  header h2 {
+  }
+
+  .summary p {
+  }
+
+  .summary p + p {
+  }
+
+  h3 {
+  }
+
+  .design-selection {
+  }
+
+  .design-selection li:last-of-type {
+  }
+
+  .design-archives {
+  }
+
+  .zen-resources {
+  }
+}
+
+@media (min-width: 47em) {
+  .benefits {
+  }
+
+.benefits h3 {
+  }
+
+.benefits p {
+  }
+}
+
+@media (min-width: 54em) {
+  .benefits {
+  }
+}
+
+@media (min-width: 64.125em) {
+  .benefits {
+  }
+
+  aside {
+  }
+
+  aside:hover {
+  }
+
+  aside:after {
+  }
+
+  aside {
+  }
+}
+
+@media (min-width: 94em) {
+  body {
+  }
+
+  .summary p {
+  }
+
+  .benefits {
+  }
+
+  .explanation h3, .explanation p, .participation h3, .participation p {
+  }
+}
+
+@media (min-width: 120em) {
+  body {
+  }
+
+  .summary p {
+  }
+
+  .preamble h3, .preamble p, .requirements h3, .requirements p {
+  }
+
+  .explanation h3, .explanation p, .participation h3, .participation p {
+  }
+
+  .benefits {
+  }
+}
+
+/* Animations */
